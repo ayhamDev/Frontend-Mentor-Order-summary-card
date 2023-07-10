@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+:root {
+  /* Primary */
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --active-blue: hsl(245, 52%, 60%);
+
+  /* Neutral */
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Red Hat Display";
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  background-color: var(--Pale-blue);
+  background-image: url("images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: 0% -40%;
+  background-size: contain;
+}
+p {
+  font-size: 1rem;
+  color: var(--Desaturated-blue);
+}
+.card {
+  border-radius: 1rem;
+  margin: 2rem;
+  background-color: white;
+  box-shadow: 0px 1.2px 1.6px rgba(0, 0, 0, 0.01),
+    0px 2.7px 3.6px rgba(0, 0, 0, 0.014), 0px 4.7px 6.3px rgba(0, 0, 0, 0.017),
+    0px 7.5px 10px rgba(0, 0, 0, 0.02), 0px 11.6px 15.5px rgba(0, 0, 0, 0.023),
+    0px 18.1px 24.1px rgba(0, 0, 0, 0.026), 0px 30px 40px rgba(0, 0, 0, 0.03),
+    0px 60px 80px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  max-width: 475px;
+}
+.card__img {
+  width: 100%;
+}
+.card__img img {
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.card__content {
+  text-align: center;
+  padding: 2.5rem;
+}
+.card__content h1 {
+  color: var(--Dark-blue);
+  font-weight: 900;
+  margin-bottom: 1.2rem;
+}
+
+.card__content > p {
+  line-height: 1.65rem;
+  margin-bottom: 1.25rem;
+  padding: 0 1.35rem;
+}
+.card__content-plan {
+  text-align: left;
+  padding: 1.25rem;
+  width: 100%;
+  background-color: var(--Very-pale-blue);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.card_content-plan-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.card_content-plan-left h2 {
+  color: var(--Dark-blue);
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+.btn--link {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+  color: var(--Bright-blue);
+  font-family: "Red Hat Display";
+  font-weight: 900;
+  cursor: pointer;
+  padding: 0.25rem;
+  transition-duration: 300ms;
+  font-size: 1rem;
+}
+.btn--link:hover {
+  text-decoration: none;
+  color: var(--active-blue);
+}
+.card_content-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.btn--primary {
+  font-size: 1.1rem;
+  transition-duration: 300ms;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Red Hat Display";
+  font-weight: 700;
+  padding: 1rem;
+  width: 100%;
+  background-color: var(--Bright-blue);
+  color: var(--Very-pale-blue);
+  border-radius: 10px;
+  box-shadow: 0px 2.6px 1.6px rgba(0, 0, 0, 0.012),
+    0px 5.9px 3.6px rgba(0, 0, 0, 0.021), 0px 10.2px 6.3px rgba(0, 0, 0, 0.029),
+    0px 16.3px 10px rgba(0, 0, 0, 0.035), 0px 25.1px 15.5px rgba(0, 0, 0, 0.042),
+    0px 39.2px 24.1px rgba(0, 0, 0, 0.049), 0px 65.1px 40px rgba(0, 0, 0, 0.058),
+    0px 130px 80px rgba(0, 0, 0, 0.08);
+}
+
+.btn--primary:hover {
+  background-color: var(--active-blue);
+}
+.btn--secondary {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+  width: 100%;
+  background-color: transparent;
+  color: var(--Desaturated-blue);
+  font-weight: 900;
+  transition-duration: 300ms;
+  font-size: 1.1rem;
+}
+
+.btn--secondary:hover {
+  color: var(--Dark-blue);
+}
+
+@media only screen and (max-width: 900px) {
+  body {
+    background-image: url("images/pattern-background-mobile.svg");
+    background-position: top;
+  }
+  .card__content {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .card__content-plan h2 {
+    font-size: 0.9rem;
+  }
+  .card__content-plan p {
+    font-size: 0.9rem;
+  }
+  .btn--link {
+    font-size: 0.8rem;
+    cursor: default;
+  }
+  .btn--primary {
+    font-size: 1rem;
+    cursor: default;
+  }
+  .btn--secondary {
+    font-size: 1rem;
+    cursor: default;
+  }
+  h1 {
+    font-size: 1.6rem;
+    cursor: default;
+  }
+}
